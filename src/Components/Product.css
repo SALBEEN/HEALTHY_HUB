@@ -1,0 +1,59 @@
+/* ===============================
+   PAGE BASE
+================================ */
+.product-page {
+  padding: 40px 5%;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* ===============================
+   CATEGORY TITLE
+================================ */
+.category-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #111;
+}
+
+/* ===============================
+   PRODUCT GRID
+================================ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+}
+
+/* ===============================
+   PRODUCT CARD WRAPPER
+   (Assuming your Card component already has nice styling)
+================================ */
+.product-grid .card {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===============================
+   RESPONSIVE ADJUSTMENTS
+================================ */
+@media (max-width: 1024px) {
+  .product-page {
+    padding: 30px 4%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-page {
+    padding: 20px 3%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-page {
+    padding: 15px 2%;
+  }
+}

@@ -1,0 +1,3 @@
+good navbar
+filter functionality
+storing function in context filter

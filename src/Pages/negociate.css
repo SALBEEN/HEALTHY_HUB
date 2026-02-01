@@ -1,0 +1,205 @@
+/* ==================== VARIABLES ==================== */
+:root {
+  --bg-white: #ffffff;
+  --bg-soft: #f9fafb;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --border-light: #e5e7eb;
+
+  --green-main: #16a34a;
+  --green-hover: #15803d;
+
+  --red-main: #dc2626;
+  --red-hover: #b91c1c;
+
+  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ==================== PAGE LAYOUT ==================== */
+.negociate-main {
+  min-height: 100vh;
+  background: var(--bg-soft);
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text-dark);
+}
+
+.negociate-user-form {
+  width: 100%;
+  max-width: 850px;
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ==================== HEADINGS ==================== */
+.main-heading p {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.negociate-image-container-heading {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+/* ==================== FORM ELEMENTS ==================== */
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.user-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  display: block;
+  padding: 15px;
+}
+
+.user-form input,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: all 0.25s ease;
+}
+
+.user-form input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--green-main);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+}
+
+/* ==================== FULLNAME GRID ==================== */
+.fullname {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ==================== IMAGE UPLOAD ==================== */
+.negociate-image-container {
+  background: var(--bg-soft);
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.image-holder input {
+  border: none;
+  background: transparent;
+}
+
+/* ==================== URGENCY NOTES ==================== */
+.negociate-user-urgency-level .urgency-level-note {
+  background: #fef3c7; /* soft yellow highlight */
+  border: 1px solid #fcd34d;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.negociate-user-urgency-level .urgency-level-note ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #92400e;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==================== RADIO BUTTONS ==================== */
+.mobile-brand {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.mobile-brand input[type="radio"] {
+  margin-right: 8px;
+  accent-color: var(--green-main); /* modern colored radios */
+}
+
+/* ==================== BUTTONS ==================== */
+.negociate-control-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Cancel Button */
+.button-for-cancle button {
+  background: transparent;
+  color: var(--red-main);
+  border: 2px solid var(--red-main);
+  padding: 14px 40px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-for-cancle button:hover {
+  background: var(--red-main);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Confirm Button */
+.button-for-confirm button {
+  background: var(--green-main);
+  color: white;
+  border: none;
+  padding: 14px 50px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.button-for-confirm button:hover {
+  background: var(--green-hover);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* ==================== SELECTS / SERVICE ==================== */
+select {
+  cursor: pointer;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 640px) {
+  .fullname {
+    grid-template-columns: 1fr;
+  }
+
+  .negociate-control-buttons {
+    flex-direction: column;
+  }
+
+  .button-for-cancle button,
+  .button-for-confirm button {
+    width: 100%;
+  }
+}
